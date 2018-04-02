@@ -1,0 +1,32 @@
+﻿<Window x:Class="DX2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:DX2"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded_1"
+           KeyUp="OnKey">
+    <Grid Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Новая ломаная(пробел)" Click="NewPoly"></MenuItem>
+            <MenuItem Header="Цвет и закраска ломаной">
+                <MenuItem Header="Цвет ломаной(C)" Click="ColorPoly"></MenuItem>
+                <MenuItem Header="Закраска ломаной(B)" Click="FillPoly"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Выбрать">
+                <MenuItem Header="Выбрать ломаную(L)" Click="SelectPoly"></MenuItem>
+                <MenuItem Header="Выбрать точку(P)" Click="SelectPoint"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Удалить">
+                <MenuItem Header="Удалить отрезок(Z)" Click="DeleteLine"></MenuItem>
+                <MenuItem Header="Удалить ломаную(X)" Click="DeletePoly"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <i:NativeWindow Grid.Row="1">
+            
+        </i:NativeWindow>
+    </Grid>
+</Window>
